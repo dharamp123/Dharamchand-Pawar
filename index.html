@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dharamchand Pawar - Resume</title>
+  
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  
+  <!-- Your Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header Section with Image -->
+  <section id="header">
+    <div class="container">
+      <img src="your-image.jpg" alt="Dharamchand Pawar" class="profile-img">
+      <h1>Dharamchand Pawar</h1>
+      <p>Graduate | Web Developer | Problem Solver</p>
+   <p>
+ | Pune, Maharashtra | 
+  <span class="contact-item">
+    <img src="phone-icon.png" alt="Phone Icon" class="contact-icon" id="phone-icon">
+    <span class="contact-info" id="phone-number">+91 9404343979</span>
+  </span> <br>
+<span class="contact-item">
+    <img src="email-icon.png" alt="Email Icon" class="contact-icon" id="email-icon">
+    <span class="contact-info" id="email-address">
+      <a href="mailto:dharamp6671@gmail.com">dharamp6671@gmail.com</a>
+    </span>
+ 
+  
+  </span>
+</p>
+
+</p>
+
+    </div>
+  </section>
+
+  <!-- Objective Section -->
+  <section id="objective" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-heading" onclick="toggleVisibility('objective-content')">Objective</h2>
+      <div id="objective-content" class="section-content">
+        <p>To secure a challenging and rewarding position in the technology sector, leveraging my strong proficiency in mathematics, computer science, and troubleshooting skills...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-heading" onclick="toggleVisibility('skills-content')">Skills</h2>
+      <div id="skills-content" class="section-content">
+        <ul>
+          <li>Web Design (HTML & CSS)</li>
+          <li>Design Thinking</li>
+          <li>C Programming</li>
+          <li>Problem-Solving</li>
+          <li>Computer Literacy</li>
+          <li>Team Player</li>
+          <li>Strong Communication</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-heading" onclick="toggleVisibility('education-content')">Education</h2>
+      <div id="education-content" class="section-content">
+        <ul>
+          <li><strong>Bachelor of Engineering in Computer Science</strong> - Bharati Vidyapeeth College of Engineering, Lavale, Pune (2017-2022) - CGPA: 7.84</li>
+          <li><strong>Senior College</strong> - Narayan Junior & Senior College, Hyderabad (2016-2017) - Percentage: 94%</li>
+          <li><strong>High School</strong> - Sanskar Bharati Public School, Warora (2014-2015) - CGPA: 8.8</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Languages Section -->
+  <section id="languages" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-heading" onclick="toggleVisibility('languages-content')">Languages Known</h2>
+      <div id="languages-content" class="section-content">
+        <ul>
+          <li>English</li>
+          <li>Hindi</li>
+          <li>Marathi</li>
+          <li>Telugu</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hobbies Section -->
+  <section id="hobbies" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-heading" onclick="toggleVisibility('hobbies-content')">Hobbies</h2>
+      <div id="hobbies-content" class="section-content">
+        <ul>
+          <li>Playing Chess</li>
+          <li>Listening to Music</li>
+          <li>Swimming</li>
+          <li>Exploring Nature</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- AOS and custom scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true, // Animation will only happen once
+    });
+
+    // Toggle visibility on section click
+    function toggleVisibility(id) {
+      const element = document.getElementById(id);
+      element.classList.toggle('visible-section');
+    }
+  </script>
+<script>
+  // Function to hide the contact info after 12 seconds
+  function autoHideContactInfo(contactElement) {
+    setTimeout(function() {
+      contactElement.style.visibility = "hidden";
+      contactElement.style.opacity = "0";
+    }, 12000); // 12 seconds
+  }
+
+  // Toggle phone number visibility on icon click for mobile users
+  document.getElementById("phone-icon").addEventListener("click", function() {
+    const phoneNumber = document.getElementById("phone-number");
+    phoneNumber.style.visibility = (phoneNumber.style.visibility === "visible") ? "hidden" : "visible";
+    phoneNumber.style.opacity = (phoneNumber.style.opacity === "1") ? "0" : "1";
+    
+    if (phoneNumber.style.visibility === "visible") {
+      autoHideContactInfo(phoneNumber); // Automatically hide after 12 seconds
+    }
+  });
+
+  // Toggle email address visibility on icon click for mobile users
+  document.getElementById("email-icon").addEventListener("click", function() {
+    const emailAddress = document.getElementById("email-address");
+    emailAddress.style.visibility = (emailAddress.style.visibility === "visible") ? "hidden" : "visible";
+    emailAddress.style.opacity = (emailAddress.style.opacity === "1") ? "0" : "1";
+    
+    if (emailAddress.style.visibility === "visible") {
+      autoHideContactInfo(emailAddress); // Automatically hide after 12 seconds
+    }
+  });
+</script>
+
+
+
+</body>
+</html>
