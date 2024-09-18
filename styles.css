@@ -87,31 +87,36 @@ section h2 {
   max-height: 1000px; /* Adjust this depending on the section's content */
 }
 
-/* Background Images */
+/* Objective Section */
 #objective {
-  background: url('background1.jpg') no-repeat center center/cover;
+  background: url('img/galaxy1.jpg') no-repeat center center/cover;
   color: white;
 }
 
+/* Skills Section */
 #skills {
-  background: url('background2.jpg') no-repeat center center/cover;
+  background: url('img/galaxy2.jpg') no-repeat center center/cover;
   color: white;
 }
 
+/* Education Section */
 #education {
-  background: url('background3.jpg') no-repeat center center/cover;
+  background: url('img/galaxy3.jpg') no-repeat center center/cover;
   color: white;
 }
 
+/* Languages Section */
 #languages {
-  background: url('background4.jpg') no-repeat center center/cover;
+  background: url('img/galaxy4.jpg') no-repeat center center/cover;
   color: white;
 }
 
+/* Hobbies Section */
 #hobbies {
-  background: url('background5.jpg') no-repeat center center/cover;
+  background: url('img/galaxy5.jpg') no-repeat center center/cover;
   color: white;
 }
+
 /
 /* Initially hide contact info */
 .contact-info {
@@ -148,4 +153,5 @@ section h2 {
 .contact-icon:hover {
   transform: scale(1.2); /* Slightly enlarges the icon on hover */
 }
+
 
