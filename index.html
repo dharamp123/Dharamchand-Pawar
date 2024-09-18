@@ -17,7 +17,7 @@
   <!-- Header Section with Image -->
   <section id="header">
     <div class="container">
-      <img src="img/your-image.jpg" alt="Dharamchand Pawar" class="profile-img">
+      <img src="img/your-image.png" alt="Dharamchand Pawar" class="profile-img">
       <h1>Dharamchand Pawar</h1>
       <p>Graduate | Web Developer | Problem Solver</p>
    <p>
@@ -113,7 +113,51 @@
     </div>
   </section>
 
-  <script src="scripts.js"></script>
+  <!-- AOS and custom scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true, // Animation will only happen once
+    });
+
+    // Toggle visibility on section click
+    function toggleVisibility(id) {
+      const element = document.getElementById(id);
+      element.classList.toggle('visible-section');
+    }
+  </script>
+<script>
+  // Function to hide the contact info after 12 seconds
+  function autoHideContactInfo(contactElement) {
+    setTimeout(function() {
+      contactElement.style.visibility = "hidden";
+      contactElement.style.opacity = "0";
+    }, 12000); // 12 seconds
+  }
+
+  // Toggle phone number visibility on icon click for mobile users
+  document.getElementById("phone-icon").addEventListener("click", function() {
+    const phoneNumber = document.getElementById("phone-number");
+    phoneNumber.style.visibility = (phoneNumber.style.visibility === "visible") ? "hidden" : "visible";
+    phoneNumber.style.opacity = (phoneNumber.style.opacity === "1") ? "0" : "1";
+    
+    if (phoneNumber.style.visibility === "visible") {
+      autoHideContactInfo(phoneNumber); // Automatically hide after 12 seconds
+    }
+  });
+
+  // Toggle email address visibility on icon click for mobile users
+  document.getElementById("email-icon").addEventListener("click", function() {
+    const emailAddress = document.getElementById("email-address");
+    emailAddress.style.visibility = (emailAddress.style.visibility === "visible") ? "hidden" : "visible";
+    emailAddress.style.opacity = (emailAddress.style.opacity === "1") ? "0" : "1";
+    
+    if (emailAddress.style.visibility === "visible") {
+      autoHideContactInfo(emailAddress); // Automatically hide after 12 seconds
+    }
+  });
+</script>
 
 
 
