@@ -89,31 +89,31 @@ section h2 {
 
 /* Objective Section */
 #objective {
-  background: url('https://wallpapercave.com/wp/wp12734005.jpg') no-repeat center center/cover;
+  background: url('img/galaxy-background.jpg') no-repeat center center/cover;
   color: white;
 }
 
 /* Skills Section */
 #skills {
-  background: url('img/galaxy2.jpg') no-repeat center center/cover;
+  background: url('img/galaxy-background.jpg') no-repeat center center/cover;
   color: white;
 }
 
 /* Education Section */
 #education {
-  background: url('img/galaxy3.jpg') no-repeat center center/cover;
+  background: url('img/galaxy-background.jpg') no-repeat center center/cover;
   color: white;
 }
 
 /* Languages Section */
 #languages {
-  background: url('img/galaxy4.jpg') no-repeat center center/cover;
+  background: url('img/galaxy-background.jpg') no-repeat center center/cover;
   color: white;
 }
 
 /* Hobbies Section */
 #hobbies {
-  background: url('img/galaxy5.jpg') no-repeat center center/cover;
+  background: url('img/galaxy-background.jpg') no-repeat center center/cover;
   color: white;
 }
 
