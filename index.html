@@ -17,17 +17,17 @@
   <!-- Header Section with Image -->
   <section id="header">
     <div class="container">
-      <img src="your-image.jpg" alt="Dharamchand Pawar" class="profile-img">
+      <img src="https://media.licdn.com/dms/image/v2/D4D35AQHhqTcvzn5cfA/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1707283182121?e=1727233200&v=beta&t=MNUkodOxQrRYK_6th3hQjfbOrRV5dtRp2xU9zv_0Utg" alt="Dharamchand Pawar" class="profile-img">
       <h1>Dharamchand Pawar</h1>
       <p>Graduate | Web Developer | Problem Solver</p>
    <p>
  | Pune, Maharashtra | 
   <span class="contact-item">
-    <img src="phone-icon.png" alt="Phone Icon" class="contact-icon" id="phone-icon">
+    <img src="img/phone-icon.png" alt="Phone Icon" class="contact-icon" id="phone-icon">
     <span class="contact-info" id="phone-number">+91 9404343979</span>
   </span> <br>
 <span class="contact-item">
-    <img src="email-icon.png" alt="Email Icon" class="contact-icon" id="email-icon">
+    <img src="img/email-icon.png" alt="Email Icon" class="contact-icon" id="email-icon">
     <span class="contact-info" id="email-address">
       <a href="mailto:dharamp6671@gmail.com">dharamp6671@gmail.com</a>
     </span>
@@ -113,51 +113,7 @@
     </div>
   </section>
 
-  <!-- AOS and custom scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1200,
-      once: true, // Animation will only happen once
-    });
-
-    // Toggle visibility on section click
-    function toggleVisibility(id) {
-      const element = document.getElementById(id);
-      element.classList.toggle('visible-section');
-    }
-  </script>
-<script>
-  // Function to hide the contact info after 12 seconds
-  function autoHideContactInfo(contactElement) {
-    setTimeout(function() {
-      contactElement.style.visibility = "hidden";
-      contactElement.style.opacity = "0";
-    }, 12000); // 12 seconds
-  }
-
-  // Toggle phone number visibility on icon click for mobile users
-  document.getElementById("phone-icon").addEventListener("click", function() {
-    const phoneNumber = document.getElementById("phone-number");
-    phoneNumber.style.visibility = (phoneNumber.style.visibility === "visible") ? "hidden" : "visible";
-    phoneNumber.style.opacity = (phoneNumber.style.opacity === "1") ? "0" : "1";
-    
-    if (phoneNumber.style.visibility === "visible") {
-      autoHideContactInfo(phoneNumber); // Automatically hide after 12 seconds
-    }
-  });
-
-  // Toggle email address visibility on icon click for mobile users
-  document.getElementById("email-icon").addEventListener("click", function() {
-    const emailAddress = document.getElementById("email-address");
-    emailAddress.style.visibility = (emailAddress.style.visibility === "visible") ? "hidden" : "visible";
-    emailAddress.style.opacity = (emailAddress.style.opacity === "1") ? "0" : "1";
-    
-    if (emailAddress.style.visibility === "visible") {
-      autoHideContactInfo(emailAddress); // Automatically hide after 12 seconds
-    }
-  });
-</script>
+  <script src="scripts.js"></script>
 
 
 
