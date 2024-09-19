@@ -13,7 +13,24 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<!-- Hamburger Menu Icon -->
+<div id="hamburger" onclick="toggleNav()">
+  ☰
+</div>
 
+<!-- Navigation Menu (Hidden by default) -->
+<nav id="sidebar">
+  <ul>
+    <li><a href="#home" >Home</a></li>
+    <li><a href="#objective" onclick="showSection('objective')">Objective</a></li>
+    <li><a href="#skills" onclick="showSection('skills')">Skills</a></li>
+    <li><a href="#education" onclick="showSection('education')">Education</a></li>
+    <li><a href="#languages" onclick="showSection('languages')">Languages</a></li>
+    <li><a href="#hobbies" onclick="showSection('hobbies')">Hobbies</a></li>
+    <a href="#home" class="back-to-home">Back to Home</a>
+  </ul>
+</nav>
+<a id="home"></a>
   <!-- Header Section with Image -->
   <section id="header">
     <div class="container">
@@ -27,7 +44,7 @@
 <div class="social-icons">
   
 <!-- Gmail -->
-<a href="mailto:youremail@gmail.com" target="_blank">
+<a href="mailto:dharamp6671@gmail.com" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail">
 </a>
   <!-- LinkedIn -->
@@ -60,21 +77,21 @@
 
     </div>
   </section>
-
+  
   <!-- Objective Section -->
-  <section id="objective" data-aos="fade-up">
+  <section id="objective" data-aos="fade-up" class="hidden">
     <div class="container">
-      <h2 class="section-heading" onclick="toggleVisibility('objective-content')">Objective</h2>
+      <h2 class="section-heading" >Objective</h2>
       <div id="objective-content" class="section-content">
         <p>To secure a challenging and rewarding position in the technology sector, leveraging my strong proficiency in mathematics, computer science, and troubleshooting skills...</p>
-      </div>
+          </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" data-aos="fade-up">
+  <section id="skills" data-aos="fade-up" class="hidden">
     <div class="container">
-      <h2 class="section-heading" onclick="toggleVisibility('skills-content')">Skills</h2>
+      <h2 class="section-heading" >Skills</h2>
       <div id="skills-content" class="section-content">
         <ul>
           <li>Web Design (HTML & CSS)</li>
@@ -90,9 +107,9 @@
   </section>
 
   <!-- Education Section -->
-  <section id="education" data-aos="fade-up">
+  <section id="education" data-aos="fade-up" class="hidden">
     <div class="container">
-      <h2 class="section-heading" onclick="toggleVisibility('education-content')">Education</h2>
+      <h2 class="section-heading" >Education</h2>
       <div id="education-content" class="section-content">
         <ul>
           <li><strong>Bachelor of Engineering in Computer Science</strong> - Bharati Vidyapeeth College of Engineering, Lavale, Pune (2017-2022) - CGPA: 7.84</li>
@@ -104,9 +121,9 @@
   </section>
 
   <!-- Languages Section -->
-  <section id="languages" data-aos="fade-up">
+  <section id="languages" data-aos="fade-up" class="hidden">
     <div class="container">
-      <h2 class="section-heading" onclick="toggleVisibility('languages-content')">Languages Known</h2>
+      <h2 class="section-heading" >Languages Known</h2>
       <div id="languages-content" class="section-content">
         <ul>
           <li>English</li>
@@ -119,9 +136,9 @@
   </section>
 
   <!-- Hobbies Section -->
-  <section id="hobbies" data-aos="fade-up">
+  <section id="hobbies" data-aos="fade-up" class="hidden">
     <div class="container">
-      <h2 class="section-heading" onclick="toggleVisibility('hobbies-content')">Hobbies</h2>
+      <h2 class="section-heading" >Hobbies</h2>
       <div id="hobbies-content" class="section-content">
         <ul>
           <li>Playing Chess</li>
@@ -141,11 +158,34 @@
       once: true, // Animation will only happen once
     });
 
-    // Toggle visibility on section click
-    function toggleVisibility(id) {
-      const element = document.getElementById(id);
-      element.classList.toggle('visible-section');
-    }
+  // Toggle the Sidebar Menu
+function toggleNav() {
+  const sidebar = document.getElementById('sidebar');
+  if (sidebar.style.display === "none" || sidebar.style.display === "") {
+    sidebar.style.display = "block";
+  } else {
+    sidebar.style.display = "none";
+  }
+}
+
+// Show the selected section and hide others
+function showSection(sectionId) {
+  // Hide all sections
+  const sections = document.querySelectorAll('section');
+  sections.forEach(section => {
+    section.classList.add('hidden');
+    section.classList.remove('visible-section');
+  });
+
+  // Show the selected section
+  const targetSection = document.getElementById(sectionId);
+  targetSection.classList.remove('hidden');
+  targetSection.classList.add('visible-section');
+
+  // Close the sidebar after selecting a section
+  document.getElementById('sidebar').style.display = 'none';
+}
+
   </script>
 
 
