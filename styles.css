@@ -125,8 +125,4 @@ section h2 {
   height: 40px;
 }
 
-/* Add hover effect to make interaction obvious */
-.contact-icon:hover {
-  transform: scale(1.2); /* Slightly enlarges the icon on hover */
-}
 
