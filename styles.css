@@ -114,36 +114,15 @@ section h2 {
   background: url('img/galaxy-background.jpg') no-repeat center center/cover;
   color: white;
 }
-/
-/* Initially hide contact info */
-.contact-info {
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0.3s ease, opacity 0.3s ease;
-  margin-left: 10px;
-  font-size: 1em;
-  background-color: #fff; /* Add a white background to make it clear */
-  padding: 5px;
-  border-radius: 5px;
-  z-index: 1;
-  transform: translateY(-10px); /* Move slightly upwards */
-}
 
-/* Show contact info on hover or focus */
-.contact-item:hover .contact-info, 
-.contact-item:focus .contact-info {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0); /* Reset position on hover */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
-
-/* Increase the icon size for better visibility and interaction */
-.contact-icon {
-  cursor: pointer;
-  width: 32px; /* Increase icon size */
-  vertical-align: middle;
-  transition: transform 0.2s ease; /* Add interaction effect */
+.social-icons a img {
+  width: 40px;
+  height: 40px;
 }
 
 /* Add hover effect to make interaction obvious */
