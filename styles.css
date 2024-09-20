@@ -150,3 +150,32 @@ section {
     height: 25px;
   }
 }
+/* Flex container for languages and hobbies section */
+.two-column {
+  display: flex;
+  justify-content: space-between; /* Ensure equal space between the two sections */
+  gap: 20px; /* Add space between cards */
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.2); /* Light glass effect */
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1; /* Flex-grow for equal width */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Box shadow for the card effect */
+}
+
+/* Responsive adjustments: Stack cards on small screens */
+@media (max-width: 768px) {
+  .two-column {
+    flex-direction: column;
+    align-items: center; /* Center-align when stacked */
+  }
+
+  .card {
+    width: 100%; /* Full width on mobile */
+    margin-bottom: 20px;
+  }
+}
