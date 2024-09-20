@@ -65,6 +65,8 @@ body {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   transition: right 0.3s ease;
   z-index: 9;
+  overflow-y: auto; /* Allow scrolling within the sidebar */
+  isolation: isolate; /* Prevents sidebar blur from affecting other sections */
 }
 
 /* When Sidebar is Active */
