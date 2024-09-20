@@ -66,8 +66,8 @@ body {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   transition: right 0.3s ease;
   z-index: 9;
-  padding: 20px;
-  clip-path: inset(0px -10px 0px 0px); /* Ensures the blur stays within the sidebar */
+  padding: 5px;
+  clip-path: polygon(); /* Ensures the blur stays within the sidebar */
 }
 
 /* When Sidebar is Active */
@@ -126,7 +126,7 @@ section {
 /* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
   #sidebar {
-    width: 100%;
+    width: 50%;
   }
 
   #sidebar ul li {
