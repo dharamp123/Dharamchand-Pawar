@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f4f9;
+  background: url('img/galaxy-background.jpg') no-repeat center center/cover; /* Whole page background */
   color: #333;
 }
 
@@ -12,106 +13,94 @@ body {
   margin: 0 auto;
   padding: 20px 0;
 }
-
-a {
-  color: #ff6347;
-  text-decoration: none;
-}
-
-/* Header Section with Profile Image */
-#header {
-  background: url('img/galaxy-background.jpg') no-repeat center center/cover;
-  color: white;
+ /* Header Section */
+ #header {
   text-align: center;
   padding: 60px 0;
+  transition: all 0.5s ease;
 }
-
-#header h1 {
-  font-size: 2.5em;
-}
-
-#header p {
-  font-size: 1.2em;
-  margin: 10px 0;
-}
-
-.profile-img {
-  width: 300px;
-  height: 300px;
-  border-radius: 70%;
+#header img.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 60px;
+  transition: all 0.5s ease;
+}
+ /* Smaller header when scrolling */
+ .small-header {
+  padding: 10px 0;
 }
 
-/* Section Headers */
-section h2 {
-  font-size: 2em;
-  color: #222;
-  border-bottom: 2px solid #ff6347;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
+.small-header img.profile-img {
+  width: 60px;
+  height: 60px;
+}
+
+.small-header h1 {
+  font-size: 1.2em;
+}
+
+/* Hamburger Icon */
+#hamburger {
+  font-size: 30px;
   cursor: pointer;
+  padding: 10px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
 }
 
-/* Section Content */
-.section-content {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+/* Sidebar (Navigation Menu) */
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Hidden by default */
+  width: 300px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3); /* Glass effect */
+  backdrop-filter: blur(10px); /* Blurring for glass effect */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 9;
 }
 
-.visible-section .section-content {
-  opacity: 1;
-  max-height: 1000px; /* Set high enough to fit the content */
+/* When Sidebar is Active */
+#sidebar.active {
+  right: 0;
 }
 
-/* Ensure sections cover the full screen and background image adjusts accordingly */
-section {
-  position: relative;
-  min-height: 100vh; /* Full viewport height */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; /* Ensures the image covers the entire section */
-  display: flex;
-  align-items: center; /* Vertically centers content */
-  justify-content: center; /* Horizontally centers content */
+/* Sidebar Links */
+#sidebar ul {
+  list-style-type: none;
   padding: 20px;
-  color: white;
 }
 
-/* Background Images */
-#objective {
-  background: url('img/galaxy-background.jpg') center center/cover no-repeat;
+#sidebar ul li {
+  padding: 10px 0;
 }
 
-#skills {
-  background: url('img/background2.jpg') center center/cover no-repeat;
+#sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  transition: color 0.2s ease;
 }
 
-#education {
-  background: url('img/galaxy-background.jpg') center center/cover no-repeat;
+#sidebar ul li a:hover {
+  color: #007bff;
 }
 
-#languages {
-  background: url('img/background2.jpg') center center/cover no-repeat;
-}
-
-#hobbies {
-  background: url('img/galaxy-background.jpg') center center/cover no-repeat;
-}
-
-/* Mobile Responsive Adjustments */
-@media (max-width: 768px) {
-  section {
-    padding: 10px;
-    background-position: center;
-    background-size: cover;
-  }
-  
-  .container {
-    width: 95%;
-  }
+/* Glass effect for content sections */
+section {
+  background: rgba(255, 255, 255, 0.3); /* Glass effect */
+  backdrop-filter: blur(10px); /* Blurring for glass effect */
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Social Icons Styling */
@@ -124,9 +113,28 @@ section {
 .social-icons a img {
   width: 40px;
   height: 40px;
+  transition: transform 0.3s ease;
 }
 
+.social-icons a img:hover {
+  transform: scale(1.5);
+}
+
+/* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
+  #sidebar {
+    width: 100%;
+  }
+
+  #sidebar ul li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  #sidebar ul li a {
+    font-size: 1.5em;
+  }
+
   .social-icons a img {
     width: 30px;
     height: 30px;
@@ -138,62 +146,4 @@ section {
     width: 25px;
     height: 25px;
   }
-}
-
-/* Hamburger Menu Styling */
-#hamburger {
-  font-size: 30px;
-  cursor: pointer;
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 1001;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 10px;
-  color: white;
-  border-radius: 5px;
-}
-
-/* Sidebar Navigation (Initially hidden) */
-#sidebar {
-  display: none;
-  position: fixed;
-  top: 50px;
-  left: 10px;
-  background-color: rgba(0, 0, 0, 0.9);
-  padding: 10px;
-  border-radius: 8px;
-  z-index: 1000;
-}
-
-#sidebar ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-#sidebar ul li {
-  margin-bottom: 10px;
-}
-
-#sidebar ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-#sidebar ul li a:hover {
-  color: #ff6347;
-}
-.back-to-home {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #ff6347;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.back-to-home:hover {
-  background-color: #e5533b;
 }
