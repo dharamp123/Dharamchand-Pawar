@@ -101,7 +101,7 @@ section {
   background: rgba(255, 255, 255, 0.3); /* Glass effect */
   backdrop-filter: blur(10px); /* Blurring for glass effect */
   padding: 20px;
-  margin: 20px;
+  margin: auto;
   border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
@@ -154,8 +154,8 @@ section {
 .two-column {
   display: flex;
   justify-content: space-between; /* Ensure equal space between the two sections */
-  gap: 20px; /* Add space between cards */
-  padding: 20px;
+  gap: 10px; /* Add space between cards */
+  padding: 10px;
 }
 
 .card {
@@ -171,7 +171,7 @@ section {
 @media (max-width: 768px) {
   .two-column {
     flex-direction: column;
-    align-items: center; /* Center-align when stacked */
+    align-items: left; /* Center-align when stacked */
   }
 
   .card {

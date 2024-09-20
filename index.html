@@ -22,13 +22,12 @@
 <!-- Navigation Menu (Hidden by default) -->
 <nav id="sidebar">
   <ul>
-    <li><a href="#home" onclick="showSection('header')">Home</a></li>
+    <li><a href="#home" class="back-to-home" onclick="showSection('header')">Back to Home</a></li>
     <li><a href="#objective" onclick="showSection('objective')">Objective</a></li>
+    <li><a href="#languages" onclick="showSection('languages-hobbies-wrapper')">Languages & Hobbies</a></li>
     <li><a href="#skills" onclick="showSection('skills')">Skills</a></li>
     <li><a href="#education" onclick="showSection('education')">Education</a></li>
-    <li><a href="#languages" onclick="showSection('languages')">Languages</a></li>
-    <li><a href="#hobbies" onclick="showSection('hobbies')">Hobbies</a></li>
-    <li><a href="#home" class="back-to-home" onclick="showSection('header')">Back to Home</a></li>
+    
   </ul>
 </nav>
 
@@ -77,9 +76,9 @@
     </div>
   </div>
 </section>
-<section id="languages-hobbies-wrapper" class="two-column">
+<section id="languages-hobbies-skill-wrapper" class="two-column">
   <!-- Languages Section -->
-  <section id="languages" data-aos="fade-right" class="hidden">
+  <section id="languages" data-aos="fade-left" class="hidden">
     <div class="container">
       <h2 class="section-heading">Languages Known</h2>
       <div id="languages-content" class="section-content">
@@ -94,7 +93,7 @@
   </section>
   
   <!-- Hobbies Section -->
-  <section id="hobbies" data-aos="fade-left" class="hidden">
+  <section id="hobbies" data-aos="fade-up" class="hidden">
     <div class="container">
       <h2 class="section-heading">Hobbies</h2>
       <div id="hobbies-content" class="section-content">
@@ -107,9 +106,7 @@
       </div>
     </div>
   </section>
-  </section>
-
-<!-- Skills Section -->
+  <!-- Skills Section -->
 <section id="skills" data-aos="fade-right" class="hidden">
   <div class="container">
     <h2 class="section-heading">Skills</h2>
@@ -126,6 +123,9 @@
     </div>
   </div>
 </section>
+  </section>
+
+
 
 <!-- Education Section -->
 <section id="education" data-aos="fade-left" class="hidden">
