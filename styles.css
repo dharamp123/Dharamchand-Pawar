@@ -54,19 +54,20 @@ body {
 }
 
 /* Sidebar (Navigation Menu) */
+/* Sidebar (Navigation Menu) */
 #sidebar {
   position: fixed;
   top: 0;
-  right: -300px; /* Hidden by default */
+  right: -300px;
   width: 300px;
   height: 100%;
-  background: rgba(255, 255, 255, 0.3); /* Glass effect */
-  backdrop-filter: blur(10px); /* Blurring for glass effect */
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   transition: right 0.3s ease;
   z-index: 9;
-  overflow-y: auto; /* Allow scrolling within the sidebar */
-  isolation: isolate; /* Prevents sidebar blur from affecting other sections */
+  padding: 20px;
+  clip-path: inset(0px -10px 0px 0px); /* Ensures the blur stays within the sidebar */
 }
 
 /* When Sidebar is Active */
