@@ -1,16 +1,16 @@
 /* General Styling */
 body {
-  font-family: Arial, sans-serif;
+  font-family: monospace,fantasy;
   margin: 0;
   padding: 0;
   background-color: #f4f4f9;
   background: url('img/galaxy-background.jpg') no-repeat center center/cover; /* Whole page background */
-  color: #333;
+  color: #0ba565d1;
 }
 
 .container {
-  width: 80%;
-  margin: 0 auto;
+  width: auto;
+  margin: 5%;
   padding: 20px 0;
 }
  /* Header Section */
@@ -49,7 +49,7 @@ body {
   top: 20px;
   right: 20px;
   z-index: 10;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(75, 166, 231, 0.12);
   border-radius: 5px;
 }
 
@@ -93,12 +93,12 @@ body {
 }
 
 #sidebar ul li a:hover {
-  color: #007bff;
+  color: #30e99cb3;
 }
 
 /* Glass effect for content sections */
 section {
-  background: rgba(255, 255, 255, 0.3); /* Glass effect */
+  /*background: rgba(75, 166, 231, 0.12); /* Glass effect */
   backdrop-filter: blur(10px); /* Blurring for glass effect */
   padding: 20px;
   margin: auto;
@@ -123,6 +123,70 @@ section {
   transform: scale(1.5);
 }
 
+/* Flex container for languages and hobbies section */
+.two-column {
+  display: flex;
+  justify-content: space-between; /* Ensure equal space between the two sections */
+  gap: 10px; /* Add space between cards */
+  padding: 10px;
+}
+
+.card {
+  background: rgba(75, 166, 231, 0.12); /* Light glass effect */
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1; /* Flex-grow for equal width */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Box shadow for the card effect */
+}
+
+/* Responsive adjustments: Stack cards on small screens */
+@media (max-width: 768px) {
+  .two-column {
+    flex-direction: column;
+    align-items: left; /* Center-align when stacked */
+  }
+
+  .card {
+    width: 100%; /* Full width on mobile */
+    margin-bottom: 20px;
+  }
+}
+/* Section Hover Enlargement */
+section {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Layout for Sections (Languages and Hobbies as before) */
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 1;
+  margin: 10px;
+  min-width: 250px;
+}
+
+/* Reverse Animation on Scroll using AOS */
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Optional: Stack columns on small screens */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+}
 /* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
   #sidebar {
@@ -143,39 +207,61 @@ section {
     height: 30px;
   }
 }
-
 @media (max-width: 480px) {
   .social-icons a img {
     width: 25px;
     height: 25px;
   }
 }
-/* Flex container for languages and hobbies section */
-.two-column {
-  display: flex;
-  justify-content: space-between; /* Ensure equal space between the two sections */
-  gap: 10px; /* Add space between cards */
-  padding: 10px;
+/* General Section Hover Enlargement */
+#hamburger, #objective, #education, #languages-hobbies-skills-wrapper {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover Effect for Objective, Education, Languages, Hobbies, and Skills */
+#hamburger:hover,#objective:hover, #education:hover, #languages-hobbies-skills-wrapper:hover {
+  transform: scale(1.05); /* Slight enlargement on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}
+
+/* For sections that are in cards */
 .card {
-  background: rgba(255, 255, 255, 0.2); /* Light glass effect */
-  backdrop-filter: blur(10px);
-  padding: 20px;
-  border-radius: 10px;
-  flex: 1; /* Flex-grow for equal width */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Box shadow for the card effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Responsive adjustments: Stack cards on small screens */
-@media (max-width: 768px) {
-  .two-column {
-    flex-direction: column;
-    align-items: left; /* Center-align when stacked */
-  }
+/* On hover, the card grows slightly */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
 
-  .card {
-    width: 100%; /* Full width on mobile */
-    margin-bottom: 20px;
+/* Ensure responsiveness for smaller devices */
+@media (max-width: 768px) {
+  #objective, #education, #languages-hobbies-skills-wrapper {
+    transform: none;
+    box-shadow: none;
   }
+}
+/* Parallax Container */
+.parallax {
+  background-image: url('img/galaxy-background.jpg'); /* Replace with your image */
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Add spacing after parallax section to test scrolling */
+.content-section {
+  height: 500px; /* Adjust as needed */
+  padding: 50px 0;
+  background-color: #f4f4f9;
+}
+
+/* Add Parallax Section for multiple background effects */
+.parallax-section {
+  height: 100vh;
+  position: relative;
 }

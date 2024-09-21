@@ -24,49 +24,58 @@
   <ul>
     <li><a href="#home" class="back-to-home" onclick="showSection('header')">Back to Home</a></li>
     <li><a href="#objective" onclick="showSection('objective')">Objective</a></li>
-    <li><a href="#languages" onclick="showSection('languages-hobbies-skills-wrapper')">Languages ,Hobbies & Skills</a></li>
-    <li><a href="#skills" onclick="showSection('skills')">Skills</a></li>
+    <li><a href="#languages-hobbies-skills-wrapper" onclick="showSection('languages-hobbies-skills-wrapper')">Languages ,Hobbies & Skills</a></li>
     <li><a href="#education" onclick="showSection('education')">Education</a></li>
     
   </ul>
 </nav>
 
 <a id="home"></a>
-
-<!-- Header Section with Image -->
-<section id="header" data-aos="fade-up">
-  <div class="container">
-    <img src="img/your-image.png" alt="Dharamchand Pawar" class="profile-img">
-    <h1>Dharamchand Pawar</h1>
-    <p>Graduate | Web Developer | Problem Solver</p>
-    <p>Pune, Maharashtra</p>
-
-    <!-- Card for Social Icons -->
-    <div class="card">
-      <div class="social-icons">
-        <a href="mailto:dharamp6671@gmail.com" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail">
-        </a>
-        <a href="https://www.linkedin.com/in/dharamchand-pawar" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
-        </a>
-        <a href="https://github.com/dharamp123" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
-        </a>
-        <a href="https://x.com/dharamp98" target="_blank">
-          <img src="https://cdn.iconscout.com/icon/free/png-512/free-twitter-logo-icon-download-in-svg-png-gif-file-formats--x-new-logos-pack-icons-7651212.png?f=webp&w=256" alt="X (Twitter)">
-        </a>
-        <a href="https://www.instagram.com/i_luv_myself_dp" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-        </a>
-        <a href="https://wa.me/919404343979?text=Hello" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        </a>
+<div class="parallax">
+  <div class="parallax-section">
+  <!-- Header Section with Image -->
+  <section id="header" data-aos="fade-right">
+    <div class="container">
+      <img src="img/your-image.png" alt="Dharamchand Pawar" class="profile-img">
+      <h1>Dharamchand Pawar</h1>
+      <p>Graduate | Web Developer | Problem Solver</p>
+      <p>Pune, Maharashtra</p>
+      <div class="parallax">
+        <div class="parallax-section">
+      <!-- Card for Social Icons -->
+       <section id="card" data-aos="fade-left">
+      <div class="card">
+        <div class="social-icons">
+          <a href="mailto:dharamp6671@gmail.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail">
+          </a>
+          <a href="https://www.linkedin.com/in/dharamchand-pawar" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+          </a>
+          <a href="https://github.com/dharamp123" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+          </a>
+          <a href="https://x.com/dharamp98" target="_blank">
+            <img src="https://cdn.iconscout.com/icon/free/png-512/free-twitter-logo-icon-download-in-svg-png-gif-file-formats--x-new-logos-pack-icons-7651212.png?f=webp&w=256" alt="X (Twitter)">
+          </a>
+          <a href="https://www.instagram.com/i_luv_myself_dp" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+          </a>
+          <a href="https://wa.me/919404343979?text=Hello" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+          </a>
+        </section>
+        </div>
+      </div>
+        </div>
       </div>
     </div>
+  </section>
   </div>
-</section>
+</div>  
 
+<div class="parallax">
+  <div class="parallax-section">
 <!-- Objective Section -->
 <section id="objective" data-aos="fade-left" class="hidden">
   <div class="container">
@@ -76,7 +85,27 @@
     </div>
   </div>
 </section>
+</div>
+</div>
+
 <section id="languages-hobbies-skills-wrapper" class="two-column">
+   <!-- Skills Section -->
+<section id="skills" data-aos="fade-right" class="hidden">
+  <div class="container">
+    <h2 class="section-heading">Skills</h2>
+    <div id="skills-content" class="section-content">
+      <ul>
+        <li>Web Design (HTML & CSS)</li>
+        <li>Design Thinking</li>
+        <li>C Programming</li>
+        <li>Problem-Solving</li>
+        <li>Computer Literacy</li>
+        <li>Team Player</li>
+        <li>Strong Communication</li>
+      </ul>
+    </div>
+  </div>
+</section>
   <!-- Languages Section -->
   <section id="languages" data-aos="fade-left" class="hidden">
     <div class="container">
@@ -106,27 +135,10 @@
       </div>
     </div>
   </section>
-  <!-- Skills Section -->
-<section id="skills" data-aos="fade-right" class="hidden">
-  <div class="container">
-    <h2 class="section-heading">Skills</h2>
-    <div id="skills-content" class="section-content">
-      <ul>
-        <li>Web Design (HTML & CSS)</li>
-        <li>Design Thinking</li>
-        <li>C Programming</li>
-        <li>Problem-Solving</li>
-        <li>Computer Literacy</li>
-        <li>Team Player</li>
-        <li>Strong Communication</li>
-      </ul>
-    </div>
-  </div>
-</section>
-  </section>
+   </section>
 
-
-
+<div class="parallax">
+  <div class="parallax-section">
 <!-- Education Section -->
 <section id="education" data-aos="fade-left" class="hidden">
   <div class="container">
@@ -140,42 +152,9 @@
     </div>
   </div>
 </section>
-
-
-<!-- AOS and custom scripts -->
+</div>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1200,
-    once: true, // Animation will only happen once
-  });
-
-  // Toggle the Sidebar Menu
-  function toggleNav() {
-    const sidebar = document.getElementById("sidebar");
-    sidebar.classList.toggle("active");
-  }
-
-  // Show selected section and hide others
-  function showSection(sectionId) {
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-      section.classList.add('hidden');
-    });
-    document.getElementById(sectionId).classList.remove('hidden');
-
-    // Optionally close the sidebar after clicking
-    const sidebar = document.getElementById("sidebar");
-    sidebar.classList.remove("active");
-  }
-
-  // On window load, only show the home section
-  window.onload = function() {
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => section.classList.add('hidden'));
-    document.getElementById('header').classList.remove('hidden'); // Show header initially
-  };
-</script>
-
+<script src="scripts.js"></script>
 </body>
 </html>
